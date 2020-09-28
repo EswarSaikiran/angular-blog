@@ -1,0 +1,61 @@
+<div class="add-topic-content">
+    <div class="container">
+        <h1 class="h3 mb-3 font-weight-normal">Edit TOPIC</h1>
+     <hr>
+     <form class="topic" [formGroup]="topicForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="TopicTitle">Topic Title</label>
+            <input type="text" id="TopicTitle" disabled [formControlName]="'blogTitle'" class="form-control"
+              placeholder="Enter Topic Title">
+        </div>
+        
+        <div class="form-group">
+            <label for="description" class="post-content">Description</label>
+            <textarea id="description" disabled [formControlName]="'description'" rows="5" cols="50"></textarea>
+          </div>
+        <div class="form-group">
+            <label for="rating">Rating</label>
+            <input type="number" id="rating" disabled [formControlName]="'averageRating'" class="form-control"
+              placeholder="Enter averageRating on  Topic">
+        </div>
+        <div class="form-group">
+            <label for="category">Category</label>
+            <input type="text" id="category" disabled [formControlName]="'category'" class="form-control"
+              placeholder="Enter Category of Topic">
+        </div>
+        <div class="form-group">
+            <label for="status">Status</label>
+            <input type="text" id="rating"  [formControlName]="'status'" class="form-control"
+              placeholder="Enter status of Topic">
+        </div>
+        <!-- <div class="well">
+          <div formArrayName="comments"
+          *ngFor="let commenti of topicForm.get('comments').controls; let i = index">
+       <div [formGroupName]="i">
+        <div class="form-group">
+          <label  [attr.for]="'comment'+i" class="sr-only">Comment</label>
+          <input type="text"  [id]="'comment'+i" [formControlName]="'comments'" class="form-control"
+            placeholder="Enter your Comment on this Topic" required="" autofocus="">
+      </div>
+       </div>
+     </div>
+        </div> -->
+        <!-- <div class="form-group">
+          <div class="col-md-offset-2 col-md-4">
+            <button type="button" class="btn btn-primary" (click)="addCommentsButtonClick()">
+              Add Skill
+            </button>
+          </div>
+        </div> -->
+        
+        <!--Add Comments-->
+        
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Post</button>
+        </div>
+     </form>
+    </div>
+   </div>
+
+

@@ -1,0 +1,66 @@
+
+     <form class="topic" [formGroup]="topicForm" (ngSubmit)="onSubmit()">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">CREATE TOPIC</h3>
+        </div>
+        <div class="panel-body">
+        <div class="form-group">
+            <label for="TopicTitle">Topic Title</label>
+            <input type="text" id="TopicTitle" [formControlName]="'blogTitle'" class="form-control"
+              placeholder="Enter Topic Title">
+        </div>
+        
+        <div class="form-group">
+            <label for="description" class="post-content">Description</label>
+            <textarea id="description" [formControlName]="'description'" rows="5" cols="50"></textarea>
+          </div>
+        <!-- <div class="form-group">
+            <label for="rating">Rating</label>
+            <input type="number" id="rating" [formControlName]="'averageRating'" class="form-control"
+              placeholder="Enter averageRating on  Topic">
+        </div> -->
+        <div class="form-group">
+            <label for="category">Category</label>
+            <select id="userType" [formControlName]="'category'">
+              <option value="" disabled selected>Select Category</option>
+              <option *ngFor="let c of categoryArray" [ngValue]="c">{{c}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="status">Status</label>
+            <input type="text" id="rating" disabled [formControlName]="'status'" class="form-control"
+              placeholder="Enter status of Topic">
+        </div>
+        <!-- <div class="well">
+          <div formArrayName="comments"
+          *ngFor="let commenti of topicForm.get('comments').controls; let i = index">
+       <div [formGroupName]="i">
+        <div class="form-group">
+          <label  [attr.for]="'comment'+i" class="sr-only">Comment</label>
+          <input type="text"  [id]="'comment'+i" [formControlName]="'comments'" class="form-control"
+            placeholder="Enter your Comment on this Topic" required="" autofocus="">
+      </div>
+       </div>
+     </div>
+        </div> -->
+        <!-- <div class="form-group">
+          <div class="col-md-offset-2 col-md-4">
+            <button type="button" class="btn btn-primary" (click)="addCommentsButtonClick()">
+              Add Skill
+            </button>
+          </div>
+        </div> -->
+        
+        <!--Add Comments-->
+        </div>
+
+        <div class="panel-footer">
+          <button type="submit" class="btn btn-primary">Post</button>&nbsp; &nbsp;
+          <button  class="btn btn-primary" (click)="ViewLLTopics()">ViewAll-Topic</button>
+        </div>
+         </div>  
+          
+     </form>
+    
+

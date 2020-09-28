@@ -1,0 +1,49 @@
+<!-- Comment Please
+<form [formGroup]="commentForm" (ngSubmit)="onSubmit()">
+    <div formArrayName="commentlist">
+        <div *ngFor="let list of commentForm.get('commentlist')['controls']; index as i" [formGroupName]="i">
+            <!-- let skill of employeeform.get('skills').controls; let i = index -->
+          
+            <!-- <div class="form-group"> 
+                <label class="col-sm-2 control-label" [attr.for]="'commentname'+i">
+                  Comment
+                </label>
+                <div class="col-sm-4">
+                  <input type="text" class="form-control" [id]="'commentname'+i"
+                    required placeholder="comment here" formControlName="comment">
+                   </div>
+                   </div>
+                
+        </div> -->
+    <!-- </div>
+    <button type="submit" class="btn btn-info">Submit</button>
+</form>
+<button class="btn btn-info" (click)="addComment()">Add Comment</button>  -->
+-->
+
+<form  [formGroup]="commentForm" (ngSubmit)="onSubmit()">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">COMMENT</h3>
+    </div>
+    <div class="panel-body">
+    <div class="form-group">
+        <label for="comment">Comment</label>
+        <input type="text" id="comment" [formControlName]="'commentlist'" class="form-control"
+          placeholder="Enter Comment Here">
+    </div>
+    
+  
+    </div>
+
+    <div class="panel-footer">
+      <button type="submit" class="btn btn-primary">Post</button>&nbsp; &nbsp;
+      <button class="btn btn-info" (click)="gotoTopics()">Back</button>
+      <!-- <button  class="btn btn-primary" (click)="ViewLLTopics()">ViewAll-Topic</button> -->
+    </div>
+     </div>  
+      
+ </form>
+
+
+

@@ -1,0 +1,25 @@
+
+<!-- <button class="btn btn-primary" (click)="gobacktoviewsall()">Back</button> -->
+<div>
+  <div class="container"  *ngFor="let data of commentsdata;let i = index">
+
+      <!-- <div class="panel-heading">
+          <h3 class="panel-title">{{alltopic.blogTitle | uppercase}}</h3>
+      </div> -->
+      <!-- <div class="panel-body"> -->
+          <div  class="row">
+              <div class="col-xs-10">
+                  <h5>{{data[0]}}</h5>
+                  <hr>
+              </div>
+          </div>
+      <!-- </div> -->
+      <!-- <div class="panel-footer">
+        <button class="btn btn-danger" (click)="deleteComment()">Delete</button>
+
+      </div>
+     -->
+  </div>
+ 
+</div>
+<button class="btn btn-primary" (click)="gobacktoviewsall()">Back</button>
